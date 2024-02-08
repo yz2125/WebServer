@@ -2,7 +2,7 @@
 from socket import *
 # In order to terminate the program
 import sys
-HOST = '127.0.0.1'
+HOST = '192.168.1.72'
 PORT = 13331
 
 def webServer(port=13331):
