@@ -2,16 +2,22 @@
 from socket import *
 # In order to terminate the program
 import sys
-
-
+HOST = '127.0.0.1'
+PORT = 6789
 
 def webServer(port=13331):
   serverSocket = socket(AF_INET, SOCK_STREAM)
   
   #Prepare a server socket
   serverSocket.bind(("", port))
-  
+  serverSocket.listen(1)
   #Fill in start
+  While True:
+    print("listening")
+    connectionSocket, addr = serverSocket.accept()
+    try:
+      message = connectionSocket.recv(1024)
+      print(message)
 
   #Fill in end
 
