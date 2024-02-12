@@ -1,7 +1,6 @@
 # import socket module
 from socket import *
 # In order to terminate the program
-from socket import*
 import sys
 #HOST = '127.0.0.1'
 #PORT = 13331
