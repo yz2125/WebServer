@@ -39,7 +39,7 @@ def webServer(port=13331):
       outputdata += b"Server: SimpleHTTPServer\r\n"
       outputdata += b"Connection: close\r\n"
       outputdata += b'\r\n\"
-      #outputdata = b"Content-Type: text/html; charset=UTF-8\r\n"
+      outputdata = b"Content-Type: text/html; charset=UTF-8\r\n"
     #   connectionSocket.send(outputdata)
 
       #Note that a complete header must end with a blank line, creating the four-byte sequence "\r\n\r\n" Refer to https://w3.cs.jmu.edu/kirkpams/OpenCSF/Books/csf/html/TCPSockets.html
