@@ -33,7 +33,7 @@ def webServer(port=13331):
 
       # This variable can store the headers you want to send for any valid or invalid request.   What header should be sent for a response that is ok?
       # Fill in start
-      connectionSocket.sendll(b"HTTP/1.1 200 OK")
+      connectionSocket.sendall(b"HTTP/1.1 200 OK")
       #Content-Type is an example on how to send a header as bytes. There are more!
       outputdata = b"HTTP/1.1 200 OK\r\n"
       outputdata += b"Server: SimpleHTTPServer\r\n"
@@ -47,9 +47,7 @@ def webServer(port=13331):
                
       for i in f: #for line in file
       #Fill in start - append your html file contents #Fill in end 
-        # outputdata += i 
         outputdata += bytes(i, 'utf-8')
-        outputdata += bytes(i, 'html')
         
       #Send the content of the requested file to the client (don't forget the headers you created)!
       # Fill in start
