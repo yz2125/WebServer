@@ -38,7 +38,6 @@ def webServer(port=13331):
       outputdata = b"HTTP/1.1 200 OK\r\n"
       outputdata += b"Server: SimpleHTTPServer\r\n"
       outputdata += b"Connection: close\r\n"
-      outputdata += b"\r\n\"
       outputdata = b"Content-Type: text/html; charset=UTF-8\r\n"
     #   connectionSocket.send(outputdata)
 
