@@ -12,7 +12,7 @@ def webServer(port=13331):
   serverSocket.bind(("", port))
 
   #Fill in start
-  serverSocket.listen(4)
+  serverSocket.listen()
   #Fill in end
 
   while True:
@@ -35,7 +35,7 @@ def webServer(port=13331):
       # Fill in start
       connectionSocket.send(b"HTTP/1.1 200 OK")
       #Content-Type is an example on how to send a header as bytes. There are more!
-      outputdata = b"HTTP/1.1 200 OK\r\n"
+      outputdata += b"HTTP/1.1 200 OK\r\n"
       outputdata += b"Server: SimpleHTTPServer\r\n"
       outputdata += b"Connection: close\r\n"
       outputdata = b"Content-Type: text/html; charset=UTF-8\r\n"
