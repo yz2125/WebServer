@@ -39,7 +39,6 @@ def webServer(port=13331):
       outputdata += b"Server: SimpleHTTPServer\r\n"
       outputdata += b"Connection: close\r\n"
       outputdata = b"Content-Type: text/html; charset=UTF-8\r\n"
-      outputdat = f.read()
     #   connectionSocket.send(outputdata)
 
       #Note that a complete header must end with a blank line, creating the four-byte sequence "\r\n\r\n" Refer to https://w3.cs.jmu.edu/kirkpams/OpenCSF/Books/csf/html/TCPSockets.html
@@ -63,6 +62,7 @@ def webServer(port=13331):
       # Remember the format you used in the try: block!
       #Fill in start
       connectionSocket.send(b"HTTP/1.1 404 Not Found\r\n\r\n")
+      connectionSocket.send("<html><head></head><body><h1>404 Not Found</h1></body></html>\r\n")
       #Fill in end
 
 
