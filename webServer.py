@@ -12,7 +12,7 @@ def webServer(port=13331):
   serverSocket.bind(("", port))
 
   #Fill in start
-  serverSocket.listen()
+  serverSocket.listen(4)
   #Fill in end
 
   while True:
@@ -62,7 +62,6 @@ def webServer(port=13331):
       # Remember the format you used in the try: block!
       #Fill in start
       connectionSocket.send(b"HTTP/1.1 404 Not Found\r\n\r\n")
-      connectionSocket.send("<html><head></head><body><h1>404 Not Found</h1></body></html>\r\n")
       #Fill in end
 
 
