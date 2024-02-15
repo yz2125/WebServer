@@ -21,7 +21,7 @@ def webServer(port=13331):
     connectionSocket, addr = serverSocket.accept()
 
     try:
-      message = connectionSocket.recv(1024).decode()
+      message = connectionSocket.recv(1024)
       #Fill in start -a client is sending you a message   #Fill in end 
       filename = message.split()[1]
 
@@ -43,8 +43,8 @@ def webServer(port=13331):
       #"Server: SimpleHTTPServer\r\n" \ 
       #"Connection: close\r\n" \ 
       #"Content-Type: text/html; charset=UTF-8\r\n\r\n"
-      connectionSocket.send(outputdata.encode())
-      #connectionSocket.sendall(outputdata)
+      #connectionSocket.send(outputdata.encode())
+      connectionSocket.sendall(outputdata)
       
 
       #Note that a complete header must end with a blank line, creating the four-byte sequence "\r\n\r\n" Refer to https://w3.cs.jmu.edu/kirkpams/OpenCSF/Books/csf/html/TCPSockets.html
